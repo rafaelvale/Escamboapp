@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180430170949) do
+ActiveRecord::Schema.define(version: 20180611193428) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20180430170949) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.integer  "role"
   end
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
@@ -44,9 +46,9 @@ ActiveRecord::Schema.define(version: 20180430170949) do
   add_index "ads", ["member_id"], name: "index_ads_on_member_id"
 
   create_table "categories", force: :cascade do |t|
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "description", limit: 60
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "members", force: :cascade do |t|

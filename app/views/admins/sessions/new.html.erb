@@ -14,12 +14,7 @@
                                 <div class="form-group">
                                      <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"Password", type:"password"  %>
                                 </div>
-                                <div class="checkbox">
-                                    <label>
-                                       
-                                          <%= f.check_box :remember_me %>Remember Me
-                                    </label>
-                                </div>
+                                
                                 <!-- Change this to a button or input when using this as a form -->
                                     <%= f.submit "Log in", class:"btn btn-lg btn-success btn-block" %>
                                     <%= render "admins/shared/links" %>

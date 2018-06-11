@@ -12,13 +12,22 @@ gem 'foreman'
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
 
-gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
+ source 'https://rails-assets.org' do
+
+gem 'rails-assets-bootstrap'
 #A simple, versatile notification library
-gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+gem 'rails-assets-notifyjs'
+#BootboxJS
+gem 'rails-assets-bootbox'
+
+end
 
 gem 'devise-i18n'
 #Rails gem of the Bootstrap based admin theme SB Admin 2.
 gem 'bootstrap_sb_admin_base_v2'
+
+#A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
