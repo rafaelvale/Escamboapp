@@ -12,6 +12,12 @@ gem 'foreman'
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
 
+#Minimal authorization through OO design and pure Ruby classes
+gem "pundit"
+
+#Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
+gem 'enum_help'
+
  source 'https://rails-assets.org' do
 
 gem 'rails-assets-bootstrap'
