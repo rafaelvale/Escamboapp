@@ -15,5 +15,4 @@
 //= require bootbox
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 

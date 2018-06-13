@@ -1,11 +1,15 @@
 class Backoffice::AdminsController < BackofficeController
   before_action :set_admin, only: [:edit, :update, :destroy]
+  after_action :verify_authorize, only: :new
+  after_action :verify_policy_scope, only: :index
   def index
-    @admins = Admin.with_full_access
-  end
+   # @admins = Admin.with_restricted_access
+    @admins = policy_scope(Admin)
+   end
 
   def new
     @admins = Admin.new 
+    authorize @admins
   end
 
   def create
